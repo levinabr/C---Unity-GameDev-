@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    GameObject obj;// creating a gameobject variable with name obj (not in use currently)
-    public GameObject [] shapes;// array named shapes
+   
+   GameObject[] obj; // creates an array with name obj
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    { //the code below obtains gameobjects in the name shape and destroy each with the help of foreach loop
-       foreach(GameObject shape in shapes){
-        Destroy (shape);//destroys
+    {
+       obj = GameObject.FindGameObjectsWithTag("Enemys");// finds every game object with tags Enemys
+       foreach(GameObject shape in obj ){ // finds the objects with the help of for earch loops by naming them shapes
+            Destroy(shape); // Destroys it
        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
         
    
 }
